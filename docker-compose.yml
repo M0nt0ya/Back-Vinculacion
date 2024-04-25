@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  mydatabase:
+    container_name: mydatabase
+    image: postgres:13.1-alpine
+    environment:
+      POSTGRES_DB: ##########################
+      POSTGRES_PASSWORD: ##########################
+      POSTGRES_USER: ##########################
+    volumes:
+      -  ##########################
+    networks:
+      - 
+        ##########################
+
+  mybackend:
+    image: ##########################
+    build:
+      context: .
+    container_name: ##########################
+    depends_on:
+      - mydatabase
+    environment:
+      - spring.datasource.url=jdbc:postgresql://mydatabase:5432/##########################
+      - spring.datasource.username=##########################
+      - spring.datasource.password=##########################
+    ports:
+      - "8083:8083"
+    networks:
+      - 
+        ##########################
+
+  myfrontend:
+    depends_on:
+      -  ##########################
+    image: ##########################:v1
+    ports:
+      - 80:80
+    networks:
+      - 
+        ##########################
+
+volumes:
+  ##########################:
+  external: false
+
+networks:
+  ##########################t:
+  external: false
+
+secrets:
+  db_dev_pass:
+    external: true

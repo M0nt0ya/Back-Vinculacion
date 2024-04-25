@@ -1,0 +1,8 @@
+build-image:
+    @ docker build -f Dockerfile -t ##########################:v1 . --no-cache
+volume:
+    @ docker volume create ##########################
+deploy:
+    @ docker stack deploy --with-registry-auth -c docker-compose.yml ##########################
+rm:
+    @ docker stack rm ##########################
