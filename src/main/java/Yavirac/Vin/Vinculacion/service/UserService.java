@@ -49,7 +49,7 @@ public class UserService {
             UserEntity defaultUser = UserEntity.builder()
                 .firstName("admin")
                 .lastName("admin")
-                .username("admin")
+                .username("adminNuevoPorvenir")
                 .email("admin@example.com")
                 .password(passwordEncoder.encode("admin2024NuevoPorvenir")) // Codificar la contraseña
                 .build();
