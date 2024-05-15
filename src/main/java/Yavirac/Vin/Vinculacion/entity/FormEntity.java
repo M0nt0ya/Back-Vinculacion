@@ -34,8 +34,13 @@ public class FormEntity {
     @NotNull
     @NotBlank
     @NotEmpty
-    private String lastName;
+    private String phone;
 
+    @NotNull
+    @NotBlank
+    @NotEmpty
+    private String email;
+    
     @NotNull
     @NotBlank
     @NotEmpty

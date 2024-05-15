@@ -44,14 +44,14 @@ public class UserService {
     @Transactional
     public void createDefaultUser() {
         // Comprobar si ya existe un usuario predeterminado
-        if (userRepository.findByUsername("defaultUser").isEmpty()) {
+        if (userRepository.findByUsername("adminNuevoPorvenir").isEmpty()) {
             // Crear el usuario predeterminado
             UserEntity defaultUser = UserEntity.builder()
-                .firstName("Default")
-                .lastName("User")
-                .username("defaultUser")
-                .email("default@example.com")
-                .password(passwordEncoder.encode("password")) // Codificar la contraseña
+                .firstName("admin")
+                .lastName("admin")
+                .username("admin")
+                .email("admin@example.com")
+                .password(passwordEncoder.encode("admin2024NuevoPorvenir")) // Codificar la contraseña
                 .build();
             
             // Guardar el usuario en la base de datos

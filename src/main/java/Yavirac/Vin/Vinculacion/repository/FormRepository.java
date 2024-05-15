@@ -7,4 +7,5 @@ import Yavirac.Vin.Vinculacion.entity.FormEntity;
 
 @Repository
 public interface FormRepository extends JpaRepository<FormEntity, Long> {
+    void deleteById(Long id);
 }

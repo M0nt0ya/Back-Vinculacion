@@ -25,4 +25,9 @@ public class FormService {
     public List<FormEntity> getAllForms() {
         return formRepository.findAll();
     }
+
+    @Transactional
+    public void deleteFormById(Long id) {
+        formRepository.deleteById(id);
+    }
 }

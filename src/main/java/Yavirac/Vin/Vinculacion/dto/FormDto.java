@@ -14,7 +14,8 @@ import lombok.Setter;
 public class FormDto {
 
     private String name;
-    private String lastName;
+    private String phone;
+    private String email;
     private String comment;
     
 }
